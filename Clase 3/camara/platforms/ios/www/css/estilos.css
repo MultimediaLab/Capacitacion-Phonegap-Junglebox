@@ -1,0 +1,24 @@
+/* Fuentes (@FONT FACE), Animaciones (@KEYFRAMES)*/
+
+/* 1.Estilos Etiquetas*/
+footer{
+	position: fixed !important;
+	bottom: 0;
+	width: 100%;
+}
+/* 2.Estilos Clases*/
+.image{
+	width: 200px;
+}
+
+/* 3.Estilos Id*/
+#camara section{
+	text-align: center;
+}
+
+#gps, #map-canvas {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+}
+/* 4.Responsive Design - Media Queries*/
