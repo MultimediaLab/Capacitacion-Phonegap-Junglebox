@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.4.min.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.icons-1.4.4.min.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.4.4.min.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.4.4.min.css">
+
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+        <title>Contactos</title>
+    </head>
+    <body>
+        <div id="login" data-role="page">
+            <div data-role="header">
+                <h1>Login</h1>
+            </div>
+            <div data-role="content">
+                <form id="login_form">
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Correo:</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="text" placeholder="Ingrese su Nombre" id="correo_login" name="correo_login" value="correo@correo.com">
+                        </div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Contraseña:</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="password" placeholder="Ingrese su Nombre" id="password_login" name="password_login" value="1234">
+                        </div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"></div>
+                        <div class="ui-block-b">
+                            <button id="login_user" type="submit">Ingresar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="registro" data-role="page">
+            <div data-role="header">
+                <h1>Formulario de Registro</h1>
+            </div>
+            <div data-role="content">
+                <form id="form_registro">
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Nombre:</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="text" placeholder="Ingrese su Nombre" id="name" name="name">
+                        </div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Contraseña:</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="password" placeholder="Ingrese su Contraseña" id="password" name="password">
+                        </div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Celular</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" placeholder="Ingrese su Celular" id="phone" name="phone">
+                        </div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Genero</label>
+                        </div>
+                        <div class="ui-block-b" data-role="controlgroup">
+                            <label for="genero1">M</label>
+                            <input type="radio" value="M" name="genero" id="genero1" class="genero">
+
+                            <label for="genero2">F</label>
+                            <input type="radio" value="F" name="genero" id="genero2" class="genero">
+                        </div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Correo Electronico</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="email" placeholder="Ingrese su Email" id="mail" name="mail">
+                        </div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Recibir notificaciones</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <select name="notification" id="notification" data-role="slider">
+                                <option value="si">Si</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label></label>
+                        </div>
+                        <div class="ui-block-b">
+                            <button id="save" type="submit">Guardar</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <div data-role="page" id="search_contact">
+            <div data-role="header">
+                <h1>Buscar Contacto</h1>
+            </div>
+            <div data-role="content">
+                <input id="buscar" type="text" placeholder="Buscar Contacto">
+                <div id="results_search"></div>
+                <div>
+                 <a id="add_contact" href="#adicionar_contacto" data-role="button" data-icon="plus">Adicionar Contacto</a>
+                </div>
+            </div>
+        </div>
+        <div data-role="page" id="adicionar_contacto">
+            <div data-role="header">
+                <h1>Adicionar Contacto</h1>
+            </div>
+            <div data-role="content">
+                <form id="add_contact_form">
+                    <input type="text" name="name" placeholder="nombre">
+                    <input type="text" name="subname" placeholder="apellido">
+                    <input type="tel" name="phone1" placeholder="celular">
+                    <input type="tel" name="phone2" placeholder="casa">
+                    <button id="save_contact" type="submit">Guardar</button>
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/vendor/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="js/vendor/jquery.mobile-1.4.4.min.js"></script>
+        <script type="text/javascript" src="js/vendor/jquery.serializejson.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+
+    </body>
+</html>
